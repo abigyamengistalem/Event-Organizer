@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Event_Organizer.ForContestants"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+               xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Event_Organizer"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto"
+             Margin="250 0 0 0" Background="#FFF0EDF6"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <UserControl.Resources>
+        <DataTemplate x:Key="ContestantTemplate" DataType="{x:Type local:SingleGalleryData}">
+
+            <StackPanel Margin="25" Orientation="Horizontal">
+                <Image VerticalAlignment="Top" x:Name="imagePath" Width="150" Source="{Binding imagePath}"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" Content=" First Name:"/>
+                    <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content=" Middle Name:"/>
+                    <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="Email Address:"/>
+                    <Label VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Content="Height:"/>
+                    <Label VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Content="Biiography:"/>
+                    <Label VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Content="Contestant Number:"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"
+                               Text="{Binding contestantFNameBind}"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"
+                               Text="{Binding contestantLNameBind}"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"
+                               Text="{Binding contestantEmailBind}"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"
+                               Text="{Binding contestantHeightBind}"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="4" Grid.Column="1"
+                               Text="{Binding contestantBiographyBind}"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"
+                               Text="{Binding contestantnumberBind}"/>
+                </Grid>
+
+            </StackPanel>
+        </DataTemplate>
+
+    </UserControl.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <StackPanel>
+            <ListBox ItemTemplate="{StaticResource ContestantTemplate}" ItemsSource="{Binding data}" Margin="25" Height="Auto" Width="Auto"/>
+        </StackPanel>
+    </ScrollViewer>
+
+</UserControl>

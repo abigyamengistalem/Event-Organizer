@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Event_Organizer.ForJudges"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Event_Organizer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="250 0 0 0">
+        <Grid x:Name="Line" Height="50" VerticalAlignment="Top" Margin="0 0 0 0">
+            <TextBlock Text="Judges" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF76167C" FontSize="48" FontFamily="Sitka Banner"></TextBlock>
+        </Grid>
+        <Grid x:Name="Buttons" Margin="0 50 0 0" VerticalAlignment="Top" Width="300" HorizontalAlignment="Left" Height="572">
+            <Button Background="#FF6F0D66" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left"
+    Width="242" 
+                    
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+     BorderBrush="#FF6F0D66" Foreground="#DDF3ECEC" Margin="20,38,0,0" Height="64">
+                Add a new judge
+            </Button>
+
+            <Button Click="View_Click" Margin="18,141,0,0" Background="#FF6F0D66" x:Name="View" VerticalAlignment="Top" HorizontalAlignment="Left"
+    Width="242" 
+                    
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+    BorderBrush="#FF6F0D66" Foreground="#DDF3ECEC"  Height="64">
+                View judges
+            </Button>
+        </Grid>
+        <Grid x:Name="judgeGrid" Margin="300 0 0 0">
+
+        </Grid>
+    </Grid>
+</UserControl>

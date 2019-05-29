@@ -1,0 +1,80 @@
+﻿<Window x:Class="Event_Organizer.Contestants"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Event_Organizer"
+       xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Contestants" Height="750" Width="1100">
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid >
+
+            <Grid x:Name="Header" Height="100" VerticalAlignment="Top" materialdesign:ShadowAssist.ShadowDepth="Depth4" OpacityMask="#FFE9E1E1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Assets/wpf7.jpg"/>
+                </Grid.Background>
+                <Grid.Effect>
+                    <DropShadowEffect Color="#FFEDE2E2" RenderingBias="Quality" ShadowDepth="3" BlurRadius="20"/>
+                </Grid.Effect>
+                <TextBlock Text="Welcome To Ethiopian Beauty Pagent" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Foreground="#FFF7F5F5"></TextBlock>
+
+            </Grid>
+            <Grid x:Name="icons" Margin="0 100 0 0" Width="50" HorizontalAlignment="Left">
+                <StackPanel  Margin="0 ,50,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf9.png" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
+                </StackPanel>
+                <StackPanel  Margin="0 ,150,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf10.jpg" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel  Margin="0 ,250,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf13.jpg" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel  Margin="0 ,350,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf15.png" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
+                </StackPanel>
+                <StackPanel  Margin="0 ,450,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf16.png" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" Stretch="Fill"/>
+                </StackPanel>
+                <StackPanel  Margin="0 ,550,0,187" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left">
+                    <Image Source="Assets/wpf14.png" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
+                </StackPanel>
+
+            </Grid>
+            <Grid x:Name="Body" Margin="50 100 0 0" Width="250" HorizontalAlignment="Left" Background="White">
+               
+                <StackPanel>
+                    <Button  Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                    Content="Contestants" Click="Contestants_Click" Margin="0,50,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFC077BC" Foreground="#FFFFFF" FontFamily="Sitka Banner" FontSize="22"  />
+                </StackPanel>
+                <StackPanel>
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                    Content="Judges" Click="Judges_Click" Margin="0,150,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFB6A8D6" Foreground="#FFFFFF" />
+                </StackPanel>
+                <StackPanel>
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                   Content="Gallery" Click="Gallery_Click" Margin="0,250,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFB6A8D6" Foreground="#FFFFFF" />
+                </StackPanel>
+                <StackPanel>
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                     Content="Sponsers" Click="Sponsers_Click" Margin="0,350,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFB6A8D6" Foreground="#FFFFFF"  />
+                </StackPanel>
+                <StackPanel>
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                     Content="Venue" Click="Venue_Click" Margin="0,450,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFB6A8D6" Foreground="#FFFFFF" />
+                </StackPanel>
+                <StackPanel>
+                        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="230" Height="50"          
+                     Content="News" Click="News_Click" Margin="0,550,0,187" HorizontalAlignment="Left" Background="#FF6F0D66" BorderBrush="#FFB6A8D6" Foreground="#FFFFFF" />
+                    </StackPanel>
+                
+            </Grid>
+            <Grid x:Name="Contgrid" Margin="300 150 0 0 ">
+                
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>
